@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
+<!-- Active URL: http://ondras.zarovi.cz/sql/demo/?keyword=sample -->
+<sql>
+<datatypes db="pgsql">
+	<group label="More Usual" color="rgb(138,138,270)">
+		<type label="Serial" length="0" sql="serial" re="seriali4" quote=""/>
+		<type label="Big Integer" length="0" sql="bigint" re="int8" quote=""/>
+		<type label="Text" length="0" sql="text" quote="'"/>
+	</group>
+	<group label="Numeric" color="rgb(238,238,170)">
+		<type label="Big Serial" length="0" sql="bigserial" re="serial8" quote=""/>
+		<type label="Small Integer" length="0" sql="smallint" re="int2" quote=""/>
+		<type label="Integer" length="0" sql="integer" re="int4" quote=""/>
+		<type label="Numeric" length="1" sql="numeric" re="decimal" quote=""/>
+		<type label="Real" length="0" sql="real" re="float4" quote=""/>
+		<type label="Double Precision" length="0" sql="double precision" re="float8" quote=""/>
+	</group>
+
+	<group label="Character" color="rgb(255,200,200)">
+		<type label="Character" length="1" sql="character" re="char" quote="'"/>
+		<type label="Character Varying" length="1" sql="character varying" re="varchar" quote="'"/>
+		<type label="XML" length="0" sql="xml" quote="'"/>
+	</group>
+
+	<group label="Date &amp; Time" color="rgb(200,255,200)">
+		<type label="Timestamp" length="0" sql="timestamp" quote="'"/>
+		<type label="Timestamp With Timezone" length="0" sql="timestamp with timezone" re="timestamptz" quote="'"/>
+		<type label="Interval" length="0" sql="interval" quote="'"/>
+		<type label="Date" length="0" sql="date" quote="'"/>
+		<type label="Time" length="0" sql="time" quote="'"/>
+		<type label="Time With Timezone" length="0" sql="time with timezone" re="timetz" quote="'"/>
+	</group>
+
+	<!--
+	<group label="Geometric" color="rgb(100,155,100)">
+	FIXME
+	</group>
+        -->
+
+        <!--
+        <group label="Network Address" color="rgb(100,155,100)">
+        FIXME
+        </group>
+        -->
+
+        <!--
+        <group label="Bit String" color="rgb(100,155,100)">
+        FIXME
+        </group>
+        -->
+
+        <!--
+        <group label="Text Search" color="rgb(100,155,100)">
+        FIXME
+        </group>
+        -->
+
+        <!--
+        <group label="Arrays" color="rgb(100,155,100)">
+        FIXME
+        </group>
+        -->
+
+	<group label="Miscellaneous" color="rgb(200,200,255)">
+		<type label="Binary" length="0" sql="bytea" quote="'"/>
+		<type label="Boolean" length="0" sql="boolean" re="boll" quote="'"/>
+		<type label="UUID" length="0" sql="uuid" quote="'"/>
+		<type label="Enum" length="1" sql="enum" quote="'"/>
+		<type label="Money" length="1" sql="money" quote=""/>
+	</group>
+</datatypes><table x="431" y="152" name="dalibo_table_2">
+<row name="id" null="0" autoincrement="1">
+<datatype>serial</datatype>
+</row>
+<row name="id_table_1" null="0" autoincrement="0">
+<datatype>serial</datatype>
+<relation table="dalibo_table_1" row="id" />
+</row>
+<row name="id_table_3" null="0" autoincrement="0">
+<datatype>integer</datatype>
+<relation table="dalibo_table_3" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="194" y="252" name="dalibo_table_1">
+<row name="id" null="0" autoincrement="1">
+<datatype>serial</datatype>
+</row>
+<row name="champs_XML" null="0" autoincrement="0">
+<datatype>xml</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="792" y="140" name="dalibo_table_3">
+<row name="id" null="0" autoincrement="1">
+<datatype>integer</datatype>
+</row>
+<row name="champs_date" null="0" autoincrement="0">
+<datatype>date</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+<comment>commentaire</comment>
+</table>
+</sql>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DAL Designer</title>
+  </head>
+  <body>
+
+    <textarea name="xml" rows="30" cols="100"></textarea>
+
+    <textarea name="result" rows="30" cols="100"></textarea>
+
+    <div class="parent">
+      <div class="chil1">
+        <div class="child2">oi</div>
+      </div>
+    </div>
+
+    <script>
+
+      (function () {
+        var parser = new DOMParser();
+
+        document.getElementsByName('xml')[0].addEventListener('change', function(){
+
+          var xml = document.getElementsByName('xml')[0].value;
+          var xmlParsed = parser.parseFromString(xml, 'text/xml');
+
+          var parse = {};
+
+          var parseElements = {};
+          parseElements['tables'] = xmlParsed.getElementsByTagName('table')
+
+          for (table of parseElements.tables) {
+            parse[table.getAttribute('name')] = {rows:[]};
+            for (row of table.getElementsByTagName('row')) {
+              parse[table.getAttribute('name')]['rows'].push(row.getAttribute('name'));
+            }
+            // tables.push(table.getAttribute('name'))
+          }
+
+          console.log(parse);
+
+
+          var dal = '';
+          var tables = [];
+
+          // document.getElementsByName('result')[0].value = parse
+          console.log(tables);
+
+        });
+
+      })();
+
+    </script>
+  </body>
+</html>
